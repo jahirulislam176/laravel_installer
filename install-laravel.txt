@@ -1,0 +1,21 @@
+1.composer create-project --prefer-dist laravel/laravel blog
+2.database configure
+3.php artisan migrate
+4.composer require laravel/ui 
+5.php artisan ui bootstrap --auth 
+6.npm install
+7.npm run dev
+This is the Source of laravel Install
+https://www.itsolutionstuff.com/post/laravel-8-multi-auth-authentication-tutorialexample.html?fbclid=IwAR2R0ZJyk_PlRTs89uANYtc3UG31uFCx4-UYjxBMzQbdr1ArKtdR2bzjtHk
+
+
+install with vue.js
+1.composer create-project --prefer-dist laravel/laravel blog
+2.composer require laravel/ui
+3.php artisan ui vue --auth
+4.npm install
+5.npm run dev
+6.php artisan migrate
+7.php artisan serve
+8.http://127.0.0.1:8000/
+
