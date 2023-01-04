@@ -10,12 +10,53 @@ https://www.itsolutionstuff.com/post/laravel-8-multi-auth-authentication-tutoria
 
 
 install with vue.js
-1.composer create-project --prefer-dist laravel/laravel blog
-2.composer require laravel/ui
-3.php artisan ui vue --auth
-4.npm install
-5.npm run dev
-6.php artisan migrate
-7.php artisan serve
-8.http://127.0.0.1:8000/
+1.composer create-project --prefer-dist laravel/laravel (your Project Name)
+
+2.npm install vue@next vue-loader@next
+
+3.@vitejs/plugin-vue(search for Integrate command) (npm i @vitejs/plugin-vue)
+
+// vite.config.js
+import vue from '@vitejs/plugin-vue'
+
+export default {
+  plugins: [vue()],
+}
+
+4.create vue Enviroment (app.js)
+make any component for test purpose like App.vue
+import { createApp } from 'vue'
+// import the root component App from a single-file component.
+import App from './App.vue'
+
+const app = createApp(App)
+app.mount('#app')
+
+
+5.https://laravel.com/docs/9.x/vite#loading-your-scripts-and-styles(search)
+vuejs integrate in laravel blade file
+<!doctype html>
+<head>
+    {{-- ... --}}
+ 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+
+    {{-- ... --}}
+<body>
+   <div id="app"></div>
+    @vite('resources/js/app.js')
+</body>
+
+6.# Run the Vite development server...
+npm run dev
+ 
+# Build and version the assets for production...
+npm run build
+
+
+
+
+
 
